@@ -2,26 +2,15 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
-  background-color: #282c34;
+  background-color: #6079ad;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: rgb(6, 6, 6);
 }
 
 .App-link {
@@ -35,4 +24,46 @@
   to {
     transform: rotate(360deg);
   }
+}
+.email-container {
+  background-color: lightblue;
+  padding: 20px;
+  text-align: center; 
+  min-height: 180px; /* Ajuste a altura conforme necessário para acomodar todos os elementos */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Isso irá distribuir o espaço igualmente entre os elementos internos */
+}
+.email-input {
+  width: 18rem;
+  margin-right: 20px; /* Espaço entre o input e o botão */
+}
+.masked-Email {
+  display: flex;
+  align-items: center;
+  gap: 120px;
+  margin-top: 10px; /* Espaço entre o texto do e-mail mascarado e os botões de cópia */
+}
+.notification {
+  position: fixed; /* Ou 'absolute' se a 'App-header' for relativa */
+  top: 6rem; /* Ajuste conforme necessário */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white; /* Exemplo de cor de fundo */
+  color: blue; /* Exemplo de cor de texto */
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000; /* Garante que a notificação fique acima de outros elementos */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Exemplo de sombra */
+}
+.button_Mask_Limpar {
+  margin-left: 10px; /* Espaço entre o input e o botão */
+  width : 25rem;
+  width: 5rem;
+}
+.button_Copy {
+  margin-top: 10px;
+  height: 3rem;
+  font-size: 1rem;
+  padding: 0.5rem 1rem;
 }
