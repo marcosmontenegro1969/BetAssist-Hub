@@ -29,35 +29,35 @@
   background-color: lightblue;
   padding: 20px;
   text-align: center; 
-  min-height: 180px; /* Ajuste a altura conforme necessário para acomodar todos os elementos */
+  min-height: 180px; 
   display: flex;
   flex-direction: column;
-  justify-content: space-between; /* Isso irá distribuir o espaço igualmente entre os elementos internos */
+  justify-content: space-between;
 }
 .email-input {
   width: 18rem;
-  margin-right: 20px; /* Espaço entre o input e o botão */
+  margin-right: 20px;
 }
 .masked-Email {
   display: flex;
   align-items: center;
   gap: 120px;
-  margin-top: 10px; /* Espaço entre o texto do e-mail mascarado e os botões de cópia */
+  margin-top: 10px; 
 }
 .notification {
-  position: fixed; /* Ou 'absolute' se a 'App-header' for relativa */
-  top: 6rem; /* Ajuste conforme necessário */
+  position: fixed;
+  top: 6rem; 
   left: 50%;
   transform: translateX(-50%);
-  background-color: white; /* Exemplo de cor de fundo */
-  color: blue; /* Exemplo de cor de texto */
+  background-color: white; 
+  color: blue; 
   padding: 10px;
   border-radius: 5px;
-  z-index: 1000; /* Garante que a notificação fique acima de outros elementos */
-  box-shadow: 0 2px 4px rgba(0,0,0,0.2); /* Exemplo de sombra */
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 .button_Mask_Limpar {
-  margin-left: 10px; /* Espaço entre o input e o botão */
+  margin-left: 10px;
   width : 25rem;
   width: 5rem;
 }

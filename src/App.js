@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import './App.css';
 
 function App() {
+  // Definindo estados para o email original, email mascarado e notificação
   const [email, setEmail] = useState('');
   const [maskedEmail, setMaskedEmail] = useState('');
   const [notification, setNotification] = useState('');
 
+  // Função para mascarar o email
   const maskEmail = () => {
     const atIndex = email.indexOf('@');
     if (atIndex === -1) {
@@ -13,10 +15,11 @@ function App() {
       return;
     }
 
-    // Calcular 10% do comprimento antes do '@'
+    // Calculando o comprimento visível antes do '@' como 10% do total
     const visibleLength = Math.ceil(atIndex * 0.1);
     const maskedLength = atIndex - 2 * visibleLength;
 
+    // Construindo o email mascarado
     let masked = email.substring(0, visibleLength);
     masked += '*'.repeat(maskedLength);
     masked += email.substring(atIndex - visibleLength, atIndex);
@@ -36,16 +39,20 @@ function App() {
     setMaskedEmail(masked);
   };
 
-  const clearFields = () => {    setEmail('');
+  // Função para limpar os campos de email
+  const clearFields = () => {
+    setEmail('');
     setMaskedEmail('');
   };
 
+  // Função para copiar o texto para a área de transferência
   const copyToClipboard = text => {
     navigator.clipboard.writeText(text)
-    .then(() => showNotification('Texto copiado!'))
-      .catch(err => showNotification('Falha ao copiar: ', err));
+      .then(() => showNotification('Texto copiado!'))
+      .catch(err => showNotification('Falha ao copiar: ' + err)); // Adicionando a mensagem de erro
   };
 
+  // Função para exibir notificação
   const showNotification = (message) => {
     setNotification(message);
     setTimeout(() => {
@@ -56,7 +63,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-      {notification && <div className="notification">{notification}</div>} {/* Notificação aqui */}        
+        {notification && <div className="notification">{notification}</div>}
         <div className="email-container">
           <div>
             <label>E-mail: </label>
@@ -71,26 +78,23 @@ function App() {
           </div>
           <p>{maskedEmail || " "}</p>
           <div className="masked-Email">
-              <button 
-                onClick={() => copyToClipboard(maskedEmail)} 
-                disabled={!maskedEmail} 
-                className="button_Copy">
-                  Copiar Email Mascarado
-              </button>
-              <button 
-                onClick={() => copyToClipboard(`Segue o e-mail cadastrado em sua conta: ${maskedEmail}.\nPor medidas de segurança não é possível informar o email cadastrado por completo.`)} 
-                disabled={!maskedEmail} 
-                className="button_Copy">
-                  Copiar Mensagem Completa
-              </button>
-            </div>
+            <button 
+              onClick={() => copyToClipboard(maskedEmail)} 
+              disabled={!maskedEmail} 
+              className="button_Copy">
+                Copiar Email Mascarado
+            </button>
+            <button 
+              onClick={() => copyToClipboard(`Segue o e-mail cadastrado em sua conta: ${maskedEmail}.\nPor medidas de segurança não é possível informar o email cadastrado por completo.`)} 
+              disabled={!maskedEmail} 
+              className="button_Copy">
+                Copiar Mensagem Completa
+            </button>
+          </div>
         </div>
       </header>
-   </div>
+    </div>
   );
 }
 
 export default App;
-
-
-
