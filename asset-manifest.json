@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/BetAssist_Hub/static/css/main.e68fe9b4.css",
-    "main.js": "/BetAssist_Hub/static/js/main.8006cd8b.js",
-    "static/js/787.bbef4a97.chunk.js": "/BetAssist_Hub/static/js/787.bbef4a97.chunk.js",
+    "main.js": "/BetAssist_Hub/static/js/main.4f73452c.js",
+    "static/js/787.151a11cb.chunk.js": "/BetAssist_Hub/static/js/787.151a11cb.chunk.js",
     "index.html": "/BetAssist_Hub/index.html",
     "main.e68fe9b4.css.map": "/BetAssist_Hub/static/css/main.e68fe9b4.css.map",
-    "main.8006cd8b.js.map": "/BetAssist_Hub/static/js/main.8006cd8b.js.map",
-    "787.bbef4a97.chunk.js.map": "/BetAssist_Hub/static/js/787.bbef4a97.chunk.js.map"
+    "main.4f73452c.js.map": "/BetAssist_Hub/static/js/main.4f73452c.js.map",
+    "787.151a11cb.chunk.js.map": "/BetAssist_Hub/static/js/787.151a11cb.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e68fe9b4.css",
-    "static/js/main.8006cd8b.js"
+    "static/js/main.4f73452c.js"
   ]
 }
