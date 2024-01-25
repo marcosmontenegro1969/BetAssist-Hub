@@ -1,15 +1,16 @@
 {
   "files": {
-    "main.css": "/BetAssist-Hub/static/css/main.e68fe9b4.css",
-    "main.js": "/BetAssist-Hub/static/js/main.2a73d341.js",
+    "main.css": "/BetAssist-Hub/static/css/main.b342e3ee.css",
+    "main.js": "/BetAssist-Hub/static/js/main.7120b821.js",
     "static/js/787.151a11cb.chunk.js": "/BetAssist-Hub/static/js/787.151a11cb.chunk.js",
+    "static/media/NCS Radhiumz.woff2": "/BetAssist-Hub/static/media/NCS Radhiumz.6ee7807763bc8c9ad198.woff2",
     "index.html": "/BetAssist-Hub/index.html",
-    "main.e68fe9b4.css.map": "/BetAssist-Hub/static/css/main.e68fe9b4.css.map",
-    "main.2a73d341.js.map": "/BetAssist-Hub/static/js/main.2a73d341.js.map",
+    "main.b342e3ee.css.map": "/BetAssist-Hub/static/css/main.b342e3ee.css.map",
+    "main.7120b821.js.map": "/BetAssist-Hub/static/js/main.7120b821.js.map",
     "787.151a11cb.chunk.js.map": "/BetAssist-Hub/static/js/787.151a11cb.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.e68fe9b4.css",
-    "static/js/main.2a73d341.js"
+    "static/css/main.b342e3ee.css",
+    "static/js/main.7120b821.js"
   ]
 }
