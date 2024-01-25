@@ -1,11 +1,13 @@
 import React, { useState } from 'react';
-import './App.css';
+import './CSS/App.css';
+import InputLogin from './Componentes/InputLogin';
 
 function App() {
   // Definindo estados para o email original, email mascarado e notificação
   const [email, setEmail] = useState('');
   const [maskedEmail, setMaskedEmail] = useState('');
   const [notification, setNotification] = useState('');
+  const [error, setError] = useState('');
 
   // Função para mascarar o email
   const maskEmail = () => {
@@ -65,31 +67,35 @@ function App() {
       <header className="App-header">
         {notification && <div className="notification">{notification}</div>}
         <div className="email-container">
-          <div>
-            <label>E-mail: </label>
-            <input
-              type="email"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              className="email-input"
-            />
-            <button onClick={maskEmail} className="button_Mask_Limpar">Mascarar</button>
-            <button onClick={clearFields} className="button_Mask_Limpar">Limpar</button>
+          <div className="div_Entrada">
+            <h1 className='titulo'>BetAssist Hub</h1>
+            <InputLogin type="text"
+                        name="email"
+                        label="Digite o e-mail do usuário"
+                        value={email}
+                        onChange={(evento) => setEmail(evento.target.value)}
+                        onFocus={() => setError('')}
+                        autoComplete="off"
+                    />            
+            <button onClick={maskEmail} className="button_Mascarar">Mascarar</button>
+            <button onClick={clearFields} className="button_Limpar">Limpar</button>
+            <p>{maskedEmail || ""}</p>
           </div>
-          <p>{maskedEmail || " "}</p>
-          <div className="masked-Email">
-            <button 
-              onClick={() => copyToClipboard(maskedEmail)} 
-              disabled={!maskedEmail} 
-              className="button_Copy">
-                Copiar Email Mascarado
-            </button>
-            <button 
-              onClick={() => copyToClipboard(`Segue o e-mail cadastrado em sua conta: ${maskedEmail}.\nPor medidas de segurança não é possível informar o email cadastrado por completo.`)} 
-              disabled={!maskedEmail} 
-              className="button_Copy">
-                Copiar Mensagem Completa
-            </button>
+          <div className="button-container">
+            <button
+              onClick={() => copyToClipboard(maskedEmail)}
+              disabled={!maskedEmail}
+              className="button_Copy"
+              >Copiar Email Mascarado</button>
+            <button
+              onClick={() =>
+                copyToClipboard(
+                  `Segue o e-mail cadastrado em sua conta: ${maskedEmail}.\nPor medidas de segurança não é possível informar o email cadastrado por completo.`
+                )
+              }
+              disabled={!maskedEmail}
+              className="button_Copy"
+              >Copiar Mensagem Completa</button>
           </div>
         </div>
       </header>

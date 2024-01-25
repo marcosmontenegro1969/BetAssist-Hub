@@ -1,0 +1,143 @@
+.App {
+  text-align: center;
+}
+.App-header {
+  background-color: black;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: rgb(6, 6, 6);
+}
+.App-link {
+  color: #61dafb;
+}
+@font-face {
+  font-family: 'ncs-radhiumz';
+  src: url('../Fonts/NCS\ Radhiumz.woff2') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+
+}
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+.titulo {
+  font-family: 'ncs-radhiumz';
+  color: #8bc054;
+  font-size: 2rem;
+}
+.email-container {
+  background-color: black;
+  padding: 20px;
+  min-height: 190px; 
+  display: flex;
+  flex-direction: column;
+  border-radius: 40px;
+  box-shadow: #f28005 0px 0px 10px 2px, rgba(0, 0, 0, 0.05) 0px 8px 12px -2px, rgba(0, 0, 0, 0.1) 0px 4px 8px -1px;
+}
+.div_Entrada {
+  position: relative;
+  top: 1rem;
+}
+.grupo_Inputs {
+  position: relative;
+  width: 100%;
+}
+.grupo_Inputs input {
+  position: absolute;
+  left: 0.5rem; 
+  width: 50%;
+  height: 1.8rem;
+  padding-left: 6px;
+  border-radius: 10px;
+  border: 2px solid #8bc054;
+  outline: none;
+  background: black;
+  font-size: 0.9rem;
+  color: #f0ffff;
+}
+
+.grupo_Inputs label {
+  position: absolute;
+  top: 1rem;
+  left: 0.9rem; /* alinhamento horizontal, pode ser ajustado conforme padding do input */
+  transform: translateY(-50%); /* centraliza perfeitamente o label */
+  transition: all 0.3s;
+  pointer-events: none;
+  color: #f0ffff;
+}
+.grupo_Inputs input:focus + label,
+.grupo_Inputs input:not(:placeholder-shown) + label,
+.grupo_Inputs input:valid + label {
+  top: -25px; /* move para cima do input */
+  left: 0px;
+  transform: scale(0.85); /* diminui o tamanho */
+  color: #8bc054; /* muda a cor */
+}
+.label_Contorno {
+  font-size: 1rem; /* Ajuste o valor conforme necessário */
+}
+.notification {
+  position: fixed;
+  top: 5rem; 
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+  color: #f28005;
+  padding: 10px;
+  border-radius: 5px;
+  z-index: 1000; 
+  box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+}
+.email-container p {
+  min-height: 30px;
+  color: #f28005; /* muda a cor */
+}
+.button_Mascarar {
+  border-color: #8bc054;
+  background-color: black;
+  color: #8bc054;  width: 6rem;
+  height: 2.3rem;
+  border-radius: 20px;
+  margin-left: 20rem;
+  margin-right: 1.5rem;
+
+}
+.button_Limpar {
+  border-color: #8bc054;
+  background-color: black;
+  color: #8bc054;
+  width: 6rem;
+  height: 2.3rem;
+  border-radius: 20px;
+}
+.button-container {
+  display: flex;
+  justify-content: space-between;
+}
+.button-container :disabled {
+  cursor: not-allowed;
+  background-color: #355a15;
+}
+.button-container :enabled {
+  cursor: pointer;
+  border-color: #8bc054;
+  background-color: black;
+  color:#f28005;
+
+}
+.button_Copy {
+  margin-top: 40px;
+  height: 3rem;
+  font-size: 1rem;
+  border-radius: 20px;
+  padding: 0.5rem 1rem;
+}
